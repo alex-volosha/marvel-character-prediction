@@ -1,4 +1,4 @@
-# Comic Characters
+# Marvel Characters
 
 The dataset I used: https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-comic-characters-dataset?select=dc-wikia-data.csv 
 
@@ -22,8 +22,12 @@ Variable | Definition
 `FIRST APPEARANCE` | The month and year of the character's first appearance in a comic book, if available
 `YEAR` | The year of the character's first appearance in a comic book, if available
 
+# Goal
+Build and deploy a model that predicts dataset's minority class - Female Character
+
+# Data preparation and feature matrix
+All EDA and ML models trainings you can find in notebook.ipynb
+
 # How to run the project
+git clone https://github.com/alex-volosha/marvel-character-prediction
 
-git clone the repo
-
-# marvel-character-prediction
