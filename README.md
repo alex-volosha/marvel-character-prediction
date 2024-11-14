@@ -32,7 +32,7 @@ All EDA and ML models trainings you can find in `notebook.ipynb`
 `git clone https://github.com/alex-volosha/marvel-character-prediction`
 
 ## Run the app as a web service locally:
-> :warning: **Warning:** First make shure Docker installed and running so you can connect it.
+> :warning: **Warning:** First make sure Docker is installed and running so you can connect it.
 [Check Docker website to Install Docker Engine](https://docs.docker.com/engine/install/)
 
 * Build docker image\
