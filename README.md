@@ -22,24 +22,26 @@ Variable | Definition
 `FIRST APPEARANCE` | The month and year of the character's first appearance in a comic book, if available
 `YEAR` | The year of the character's first appearance in a comic book, if available
 
-# Goal
+## Goal
 Build and deploy a model that predicts dataset's minority class - Female Character
 
-# Data preparation and feature matrix
+## Data preparation and feature matrix
 All EDA and ML models trainings you can find in notebook.ipynb
 
-# How to run the project
-git clone https://github.com/alex-volosha/marvel-character-prediction
+## How to run the project
+`git clone https://github.com/alex-volosha/marvel-character-prediction`
 
 # Run the app as a web service locally
-* Build docker image (No need to run pipenv, Dockerfile will do it itself) by running this command in your terminal
-$ docker build -t  marvel .
+* Build docker image\
+(No need to run pipenv, Dockerfile will do it itself)\
+by running this command in your terminal
+`$ docker build -t  marvel .`
 
 * Run the docker image
-$ docker run -it --rm -p 9696:9696 marvel
+`$ docker run -it --rm -p 9696:9696 marvel`
 
 * Open new terminal window and run prediction script
-$ python character.py
+`$ python character.py`
 And you will get the prediction of character being female. 
 
 * As it's shown in features importance chart, two of the most important features are eyes, and hair. 
