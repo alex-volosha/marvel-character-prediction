@@ -23,31 +23,30 @@ Variable | Definition
 `YEAR` | The year of the character's first appearance in a comic book, if available
 
 ## Goal
-Build and deploy a model that predicts dataset's minority class - Female Character
+Build and deploy a model that predicts dataset's minority class - "Female Character"
 
-## Data preparation and feature matrix
-All EDA and ML models trainings you can find in notebook.ipynb
+## Data preparation and feature matrix:
+All EDA and ML models trainings you can find in `notebook.ipynb`
 
-## How to run the project
+## Run the project:
 `git clone https://github.com/alex-volosha/marvel-character-prediction`
 
-# Run the app as a web service locally
+## Run the app as a web service locally:
 * Build docker image\
-(No need to run pipenv, Dockerfile will do it itself)\
-by running this command in your terminal
+(No need to run pipenv, Dockerfile will do it itself) by running this command in your terminal\
 `$ docker build -t  marvel .`
 
-* Run the docker image
+* Run the docker image\
 `$ docker run -it --rm -p 9696:9696 marvel`
 
-* Open new terminal window and run prediction script
-`$ python character.py`
-And you will get the prediction of character being female. 
+* Open new terminal window and run prediction script\
+`$ python character.py`\
+And you will get the prediction of character being female or not. 
 
-* As it's shown in features importance chart, two of the most important features are eyes, and hair. 
+* As it's shown in features importance chart, two of the most important features are eyes, and hair.\
 For example, by changing variable in character.py file from:\
 'hair' : 'Red Hair'\
 to:\
-'hair' : 'Bald'\
+'hair' : 'Bald'\\
 The probability of the character being Female drops drastically, and therefor treashhold isn' reached, so as a result we get Female: 'False'
 
