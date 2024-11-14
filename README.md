@@ -4,7 +4,7 @@ The dataset I used: https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyei
 
 The data comes from [Marvel Wikia](http://marvel.wikia.com/Main_Page) and [DC Wikia](http://dc.wikia.com/wiki/Main_Page).
 
-The data is split into two files, for DC and Marvel, respectively: `dc-wikia-data.csv` and `marvel-wikia-data.csv`. Each file has the following variables:
+It's split into two files, for DC and Marvel, respectively: `dc-wikia-data.csv` and `marvel-wikia-data.csv`. Each file has the following variables:
 
 Variable | Definition
 ---|---------
@@ -30,4 +30,22 @@ All EDA and ML models trainings you can find in notebook.ipynb
 
 # How to run the project
 git clone https://github.com/alex-volosha/marvel-character-prediction
+
+# Run the app as a web service locally
+* Build docker image (No need to run pipenv, Dockerfile will do it itself) by running this command in your terminal
+$ docker build -t  marvel .
+
+* Run the docker image
+$ docker run -it --rm -p 9696:9696 marvel
+
+* Open new terminal window and run prediction script
+$ python character.py
+And you will get the prediction of character being female. 
+
+* As it's shown in features importance chart, two of the most important features are eyes, and hair. 
+For example, by changing variable in character.py file from:\
+'hair' : 'Red Hair'\
+to:\
+'hair' : 'Bald'\
+The probability of the character being Female drops drastically, and therefor treashhold isn' reached, so as a result we get Female: 'False'
 
