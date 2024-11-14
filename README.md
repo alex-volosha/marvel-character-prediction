@@ -32,18 +32,21 @@ All EDA and ML models trainings you can find in `notebook.ipynb`
 `git clone https://github.com/alex-volosha/marvel-character-prediction`
 
 ## Run the app as a web service locally:
+> :warning: **Warning:** First make shure Docker installed and running so you can connect it.
+[Check Docker website to Install Docker Engine](https://docs.docker.com/engine/install/)
+
 * Build docker image\
 (No need to run pipenv, Dockerfile will do it itself) by running this command in your terminal\
-`$ docker build -t  marvel .`
+`docker build -t  marvel .`
 
 * Run the docker image\
-`$ docker run -it --rm -p 9696:9696 marvel`
+`docker run -it --rm -p 9696:9696 marvel`
 
-* Open new a terminal window and run the prediction script\
-`$ python character.py`\
+* Open a new terminal window and run the prediction script\
+`python character.py`\
 And you will get the prediction of whether the character is female or not. 
 
-* As shown in the features importance chart, two of the most important features are eyes and hair.\
+> :bulb: **Options:** As shown in the features importance chart, two of the most important features are eyes and hair.\
 For example, by changing the variable in the `character.py` file from:\
 'hair' : 'Red Hair'\
 to:\
