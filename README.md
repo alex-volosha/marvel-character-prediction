@@ -39,14 +39,14 @@ All EDA and ML models trainings you can find in `notebook.ipynb`
 * Run the docker image\
 `$ docker run -it --rm -p 9696:9696 marvel`
 
-* Open new terminal window and run prediction script\
+* Open new a terminal window and run the prediction script\
 `$ python character.py`\
-And you will get the prediction of character being female or not. 
+And you will get the prediction of whether the character is female or not. 
 
-* As it's shown in features importance chart, two of the most important features are eyes, and hair.\
-For example, by changing variable in character.py file from:\
+* As shown in the features importance chart, two of the most important features are eyes and hair.\
+For example, by changing the variable in the `character.py` file from:\
 'hair' : 'Red Hair'\
 to:\
-'hair' : 'Bald'\\
-The probability of the character being Female drops drastically, and therefor treashhold isn' reached, so as a result we get Female: 'False'
+'hair' : 'Bald'\
+The probability of the character being Female drops drastically, and therefore, the threshold isn't reached, so, as a result, we get Female: 'False'
 
