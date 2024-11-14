@@ -11,8 +11,11 @@ flask = "*"
 gunicorn = "*"
 werkzeug = "*"
 requests = "*"
+matplotlib = "*"
+xgboost = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.12"
