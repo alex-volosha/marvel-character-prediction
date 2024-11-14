@@ -32,6 +32,20 @@ All EDA and ML models trainings you can find in `notebook.ipynb`
 `git clone https://github.com/alex-volosha/marvel-character-prediction`
 
 ## Run the app as a web service locally:
+* After cloning the repo you can install virtual environment dedicated for this project with all dependancies.\
+(Make sure to go to the project directory in you terminal before you run this):\
+`pip install pipenv`
+
+Then install Pipfile/Pipfile.lock files by:\
+`pipenv install`
+
+ Narrow down into newly created virtual environment:\
+`pipenv shell`
+
+And now you can run `python predict.py` script.\
+Open a new terminal and send request to running predict.py script by calling `python character.py`
+
+## Run the app locally within a Docker container
 > :warning: **Warning:** First make sure Docker is installed and running so you can connect it.
 [Check Docker website to Install Docker Engine](https://docs.docker.com/engine/install/)
 
