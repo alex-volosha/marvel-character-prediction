@@ -19,7 +19,7 @@ def predict():
     characters_sex = y_pred >= 0.4
 
     result = {
-        'Even probability is': float(y_pred),
+        'Probability is': float(y_pred),
         'Female Character': bool(characters_sex)
     }
 
