@@ -1,7 +1,7 @@
 import requests
 
-url = 'http://localhost:9696/predict'
-
+#url = 'http://localhost:9696/predict'
+url = 'https://marvel-216656375128.europe-north1.run.app/predict'
 
 character = {
     'id' : 'Secret Identity',

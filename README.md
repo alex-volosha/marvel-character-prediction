@@ -54,7 +54,7 @@ Open a new terminal and send request to running predict.py script by calling `py
 `docker build -t  marvel .`
 
 * Run the docker image\
-`docker run -it --rm -p 9696:9696 marvel`
+`docker run -it --rm -e PORT=9696 -p 9696:9696 marvel`
 
 * Open a new terminal window and run the prediction script\
 `python character.py`\
