@@ -31,7 +31,7 @@ All EDA and ML models trainings you can find in `notebook.ipynb`
 ## Run the project:
 `git clone https://github.com/alex-volosha/marvel-character-prediction`
 
-## Run the app as a web service locally:
+## 1. Run the app as a web service locally:
 * After cloning the repo you can install virtual environment dedicated for this project with all dependancies.\
 (Make sure to go to the project directory in you terminal before you run this):\
 `pip install pipenv`
@@ -43,9 +43,9 @@ Then install Pipfile/Pipfile.lock files by:\
 `pipenv shell`
 
 And now you can run `python predict.py` script.\
-Open a new terminal and send request to running predict.py script by calling `python character.py`
+Open a new terminal and send request to running predict.py request by calling `python character.py`
 
-## Run the app locally within a Docker container
+## 2. Run the app locally within a Docker container
 > :warning: **Warning:** First make sure Docker is installed and running so you can connect it.
 [Check Docker website to Install Docker Engine](https://docs.docker.com/engine/install/)
 
@@ -56,9 +56,15 @@ Open a new terminal and send request to running predict.py script by calling `py
 * Run the docker image\
 `docker run -it --rm -e PORT=9696 -p 9696:9696 marvel`
 
-* Open a new terminal window and run the prediction script\
+* Open a new terminal window and run the prediction request\
 `python character.py`\
 And you will get the prediction of whether the character is female or not. 
+
+## 3. Run the app to send request to Cloud (GCP)
+* You need to change URL in `character.py` request file so it will adress `predict.py` script in the cloud. 
+![Getting Started](./image.png)
+
+* Open terminal in current directory and call the same command `python character.py`
 
 > :bulb: **Options:** As shown in the features importance chart, two of the most important features are eyes and hair.\
 For example, by changing the variable in the `character.py` file from:\
