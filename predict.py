@@ -2,6 +2,7 @@ import pickle
 from flask import Flask
 from flask import request
 from flask import jsonify
+import os
 
 model_file = 'model.bin'
 
@@ -19,7 +20,7 @@ def predict():
     characters_sex = y_pred >= 0.4
 
     result = {
-        'Probability is': float(y_pred),
+        'Even probability is': float(y_pred),
         'Female Character': bool(characters_sex)
     }
 
