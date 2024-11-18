@@ -62,7 +62,7 @@ And you will get the prediction of whether the character is female or not.
 
 ## 3. Run the app to send request to Cloud (GCP)
 * You need to change URL in `character.py` request file so it will adress `predict.py` script in the cloud. 
-![Getting Started](./image.png)
+![Getting Started](image.png)
 
 * Open terminal in current directory and call the same command `python character.py`
 
